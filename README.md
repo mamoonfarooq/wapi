@@ -13,7 +13,10 @@ docker removed
 
 [issue resolved](https://github.com/pedroslopez/whatsapp-web.js/issues/2861)
 
+<<<<<<< HEAD
 ##Notes
+=======
+>>>>>>> 4c0519b (initial)
 
 
 
@@ -55,7 +58,11 @@ All APIs require [Basic Authentication](https://en.wikipedia.org/wiki/Basic_acce
 		  "cc": "DE"  //country-code 
         }
 		
+<<<<<<< HEAD
 	`cc` is optional. if provided phone number will be formated using [google-libphonenumber](https://www.npmjs.com/package/google-libphonenumber)
+=======
+	`cc` is optional. if provided, phone number will be formated using [google-libphonenumber](https://www.npmjs.com/package/google-libphonenumber)
+>>>>>>> 4c0519b (initial)
 	
   
 1. **GET** `/groups`
