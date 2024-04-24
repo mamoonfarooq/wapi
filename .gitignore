@@ -1,0 +1,12 @@
+.cache
+.npm
+.pki
+.wwebjs_auth
+.wwebjs_cache
+node_modules
+coverage
+.bash_history
+config.json
+*.tmp
+*.log
+*.sqlite
