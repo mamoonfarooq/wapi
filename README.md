@@ -9,15 +9,10 @@ Simple REST API wrapper for the super awesome [whatsapp-web.js](https://github.c
 > ⚠️ Due to the nature of the `whatsapp-web.js` dependency on WhatsApp Web behaviours, regular maintainance is required (library update, temporary workaround). If you face any unknown issue that is not fixed in this wrapper, consider checking [whatsapp-web.js issue page](https://github.com/pedroslopez/whatsapp-web.js/issues)
 
 support of [google-libphonenumber](https://www.npmjs.com/package/google-libphonenumber) is added and some minor changes.
+
 docker removed
 
 [issue resolved](https://github.com/pedroslopez/whatsapp-web.js/issues/2861)
-
-<<<<<<< HEAD
-##Notes
-=======
->>>>>>> 4c0519b (initial)
-
 
 
 ## ⚙️ Setup
