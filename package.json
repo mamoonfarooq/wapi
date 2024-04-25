@@ -19,6 +19,7 @@
     "axios": "^1.6.8",
     "better-queue": "^3.8.12",
     "better-queue-sqlite": "^1.0.7",
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "express-basic-auth": "^1.2.1",
     "google-libphonenumber": "^3.2.34",
@@ -31,6 +32,6 @@
   },
   "devDependencies": {
     "jest": "^29.7.0",
-    "supertest": "^6.3.4"
+    "supertest": "^7.0.0"
   }
 }

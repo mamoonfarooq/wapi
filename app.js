@@ -2,14 +2,14 @@ const qrImage = require('qr-image');
 const express = require('express');
 const basicAuth = require('express-basic-auth');
 
-const createApp = (client, outgoingMessageQueue, config, db, logger = console) => { 
+const createApp = (client, outgoingMessageQueue, db, logger = console) => { 
     const app = express();
     const START_DATE = new Date();
 
     app.use(express.json({ limit: '100mb' }));
 
     const basicAuthUsers = {};
-    basicAuthUsers[config.user] = config.password;
+    basicAuthUsers[process.env.USER] = process.env.PASSWORD;
     app.use(basicAuth({ users: basicAuthUsers }));
 
     app.get('/', async function(_req, res) {

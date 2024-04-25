@@ -1,6 +1,6 @@
 const Queue = require('better-queue');
-const fs = require('fs');
 const objectHash = require('object-hash');
+require('dotenv').config();
 const DB_PATH = process.env.DB_PATH || 'db.sqlite';
 
 const { logger } = require('./logger');
@@ -8,9 +8,7 @@ const { initDb } = require('./db');
 const { createClient, sendMessageAsync } = require('./client');
 const { createApp } = require('./app');
 
-const configContent = fs.readFileSync('config.json');
-const config = JSON.parse(configContent);
-const port = config.port || 4000;
+const port = process.env.PORT || 4000;
 
 const db = initDb(DB_PATH);
 const client = createClient(db);
@@ -66,7 +64,7 @@ const outgoingMessageQueue = new Queue(sendMessage, {
 })
 
 
-const app = createApp(client, outgoingMessageQueue, config, db, logger)
+const app = createApp(client, outgoingMessageQueue, db, logger)
 app.listen(port, function (err) {
     if (err) logger.error(err)
     logger.info(`Server listening on ${port}...`)
