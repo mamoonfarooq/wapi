@@ -18,7 +18,7 @@ docker removed
 ## ⚙️ Setup
 
 1. Clone repo
-2. Copy `config.example.json` to `config.json` and set desired `user` & `password` (for Basic Authentication) and `port` (for API server)
+2. Copy `.env.example` to `.env` and set desired `user` & `password` (for Basic Authentication) and `port` (for API server)
 3. Run `npm install`
 	ON Error "deprecated puppeteer@13.7.0: < 18.1.0 is no longer supported"
 	Run `node node_modules/puppeteer/install.js`
