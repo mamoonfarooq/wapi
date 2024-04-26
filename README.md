@@ -26,7 +26,7 @@ docker removed
 
 ## 🍱 API
 
-All APIs require [Basic Authentication](https://en.wikipedia.org/wiki/Basic_access_authentication) using the `user` & `password` in `config.json`:
+All APIs require [Basic Authentication](https://en.wikipedia.org/wiki/Basic_access_authentication) using the `user` & `password` in `.env`:
 
 1. **GET** `/`
 

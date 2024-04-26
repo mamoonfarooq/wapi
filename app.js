@@ -51,17 +51,11 @@ const createApp = (client, outgoingMessageQueue, db, logger = console) => {
                 .on('failed', function (err) {
                     logger.error('sendMessage FAILED');
                     logger.error(err);
-                    res.json({
-                        message: 'Message Failed!',
-                        status: '201'
-                    });
-                })
-                .on('finish', function (result) {
-                    res.json({
-                        message: 'Message sent!',
-                        status: '200'
-                    });
-                  });
+                });
+                res.status(200).json({
+                    message: 'Message sent!',
+                    status: '200'
+                });
             
         } catch (err) {
             logger.error(err);
