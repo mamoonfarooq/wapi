@@ -112,7 +112,10 @@ const sendMessageAsync = async (client, input) => {
     let chatId = input.number;
     if (!chatId.endsWith('.us')) {
         if(input["cc"] !== undefined){
-            number = phoneUtil.parseAndKeepRawInput(input.number, input.cc);
+            code = phoneUtil.parseAndKeepRawInput(input.number, input.cc).getCountryCode();
+            num = input.number.replace(/^0+/, '').replace('+','').replace(code,'');
+            number = phoneUtil.parseAndKeepRawInput('0'+num, input.cc);
+            console.log(number);
             chatId = phoneUtil.format(number, PNF.E164).substring(1);
             chatId += isNaN(chatId) ? '@g.us' : '@c.us';
         } else {
